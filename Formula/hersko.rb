@@ -5,13 +5,13 @@
 class Hersko < Formula
   desc "CLI for the Hersko workout-tracking server"
   homepage "https://hersko.app"
-  version "0.3.5"
+  version "0.3.6"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://releases.hersko.app/v0.3.5/hersko_darwin_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "2f5ed2b47ce8792bc88ecabf1f3e18d49b64bc11e0b5121c999f71bc625d0cc9"
+      url "https://releases.hersko.app/v0.3.6/hersko_darwin_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "82d860af66c0a4fa6823add1ab59a001e915f061bbedbecf49db72dbfaf30f90"
 
       define_method(:install) do
         bin.install "hersko"
@@ -19,8 +19,8 @@ class Hersko < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://releases.hersko.app/v0.3.5/hersko_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "7a0504201b9712a3a37900592535161cd047207f0b24476c43f8dcc3b5afbf80"
+      url "https://releases.hersko.app/v0.3.6/hersko_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "17a7eaedf86d6c586511cc26284131fa52d4b6039c5025df7cdc8468e27f49af"
 
       define_method(:install) do
         bin.install "hersko"
@@ -31,8 +31,8 @@ class Hersko < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://releases.hersko.app/v0.3.5/hersko_linux_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "f5c6bef4d7bd32ef8daa60b9d13fcf1f4f99c3f2640f29144354b1240f71991f"
+      url "https://releases.hersko.app/v0.3.6/hersko_linux_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "21d9a1ca7f4786f25b0b3b66b454f069cf72acec558f48c18c73f5086dd2576a"
       define_method(:install) do
         bin.install "hersko"
         generate_completions_from_executable(bin/"hersko", "completion")
